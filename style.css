@@ -7,18 +7,22 @@
     font-weight: 400;
 }
 body{
-    min-height: 100vh;
-    min-width: 100vw;
+    height: 100%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: CENTER;
     flex-direction: column;
 } 
-.container{
+.loading{
     display: flex;
+}
+.container{
     align-items: center;
     justify-content: CENTER;
     flex-direction: column;
+    display:flex;
+    scale: 1;
 }
 .menu{
     font-size: 3vh;
@@ -35,18 +39,19 @@ body{
     box-shadow: 0px 1px 8px 0px #888888;
 }
 nav{
-    height: 11vh;
+    height: 10vh;
     background-color: #fff;
     width: 100vw;
     color: #222;
-    display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
+    width: 94vw;
     padding: 0 4VH;
-    position: sticky;
+    position: fixed;
     z-index: 99999;
     top: 0;
+    box-shadow: 0px 0px 20px 0px #888888ff;
+    display: flex;
 }
 .logo{
     font-size: 3vh;
@@ -102,6 +107,7 @@ nav{
     object-position: center;
     height: 100%;
     width: 100%;
+    scale: 0.7;
 }
 .mainLeft p {
     font-size: 2.6vh;
@@ -230,7 +236,7 @@ nav{
     justify-content: space-between;
     margin-top: 7vh;
     padding: 0 5vh;
-    margin-bottom : 5vh;
+    margin-bottom: 15vh;
 }
 .grid{
     height: 35%;
@@ -274,7 +280,7 @@ nav{
     font-size: 2.5vh;
 }
 .page3Bottom{
-    height: 90vh;
+    height: min-content;
     width: 100%;
     margin-top: 10vh;
     display: flex;
@@ -296,6 +302,7 @@ nav{
     flex-direction: column;
     box-shadow: 1px 1px 10px 0px #0c0c0c24;
     margin-bottom: 15vh;
+    padding-bottom: 5vh;
 }
 .productTop{
     height: 45%;
@@ -389,6 +396,7 @@ nav{
     width: 58vh;
     position: relative;
     margin-bottom: 3vh;
+    scale: 0;
 }
 .page4Bottom{
     margin-top: 7vh;
@@ -481,7 +489,7 @@ nav{
     color: #8fbcff;
 }
 .footerSec h1{
-    font-size: 3.2vh;
+    font-size: 2.8vh;
     font-weight: 500;
     color: #f7f7f7;
     
@@ -535,18 +543,14 @@ nav{
         margin-top: 11vh;
     }
     nav{
-        height: 11vh;
+        height: 10vh;
         background-color: #fff;
         width: 100vw;
         color: #222;
-        display: flex;
         align-items: center;
         justify-content: space-between;
         width: 100%;
         padding: 0 1VH;
-        position: sticky;
-        z-index: 99999;
-        top: 0;
     }
     .navRight {
         align-items: flex-end;
