@@ -47,7 +47,7 @@ document.querySelector(".page4").addEventListener("mouseenter", ()=>{
         duration:0.8,
         delay:1.6
     })
-})
+});
 document.querySelector(".menu").addEventListener("click", ()=>{
     document.querySelector("nav").style.paddingRight = 0;
     document.querySelector(".navRight").style.alignItems = "center";
