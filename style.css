@@ -230,6 +230,7 @@ nav{
     justify-content: space-between;
     margin-top: 7vh;
     padding: 0 5vh;
+    margin-bottom : 5vh;
 }
 .grid{
     height: 35%;
