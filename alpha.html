@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            border: none;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 400;
+        }
+
+        body {
+            height: 100%;
+            width: 100%;
+        }
+
+        .hero {
+            min-height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .container {
+            min-height: 100vh;
+            width: 80vw;
+            border: 1px solid blue;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-direction: column;
+            padding: 2vh 2vh;
+        }
+
+        .box1 {
+            height: 15vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .title{
+            font-size: 2.2vh;
+            height: 4vh;
+            width: 6.5vw;
+            border-radius: 7vh;
+            background-color: #e7d6d6;
+            color: #1e1f23;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .image{
+            height: 100%;
+            width:20% ;
+        }
+        .image img{
+            height: 90%;
+            width: 100%;
+            object-fit: contain;
+        }
+        .productName{
+            font-size:2.8vh;
+            font-weight: 600;
+            width: 10%;
+        }
+        .productPrice{
+            font-size:2.8vh;
+            font-weight: 500;
+            width: 10%;
+        }
+        .quantityBox {
+            height: 7vh;
+            width:23%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .quantityBoxSec {
+            height: 85%;
+            width: 33.33%;
+            border: 1px solid rgb(166, 183, 241);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.85vh;
+        }
+        .remove{
+            padding: 1.45vh 8vh;
+            font-size: 2.6vh;
+            background-color: #1e1f23;
+            color: #f7f7f7;
+            border-radius: 7px;
+        }
+        .priceConatiner{
+            height: 45vh;
+            width: 30vw;
+            border: 2px solid red;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction:column ;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="container">
+            <div class="box1">
+                <div class="title">Laptop</div>
+                <div class="image"><img src="https://jscourse.csscourse.online/assets/laptop-CT_LaLd8.png" alt=""></div>
+                <div class="productName">Laptop</div>
+                <div class="productPrice">₹58,000</div>
+                <div class="quantityBox">
+                    <div class="quantityBoxSec">0</div>
+                    <div class="quantityBoxSec">+</div>
+                    <div class="quantityBoxSec">-</div>
+                </div>
+                <button class="remove">Remove</button>
+            </div>
+        </div>
+        <div class="priceConatiner">
+            <h1>Selected Offer Summary</h1>
+            <h1>Sub Total: ₹2199.94</h1>
+            <h1>Tax: ₹50</h1>
+            <h1>Final Total:₹2249.94</h1>
+        </div>
+    </div>
+</body>
+
+</html>
