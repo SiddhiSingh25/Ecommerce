@@ -98,9 +98,30 @@ const page4Anime = () => {
             })
     });
 };
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".shop").forEach((e) => {
+        e.addEventListener("click", () => {
+            console.log("Hello");
+            gsap.to(e, { 
+                duration: 0.5, 
+                scale: 1.05, 
+                backgroundColor: "#101010",
+                ease: "elastic.out(1, 0.3)",
+                onComplete: () => {
+                    gsap.to(e, { 
+                        duration: 0.4, 
+                        scale: 1, 
+                        backgroundColor: "#007bff",
+                        ease: "elastic.out(1, 0.3)"
+                    });
+                }
+            });
+        });
+    });
+});
 menu();
 page4Anime();
-let arr = [
+const arr = [
     {
         productImg: "https://jscourse.csscourse.online/images/lapi.png", productName: "Laptop",
         discription: "Powerful laptop with a quad-core i5 processor, 8GB RAM, 256GB SSD, and a 14-inch FHD display.", price: "₹5500",
@@ -212,7 +233,7 @@ document.querySelectorAll(".decrement").forEach((e) => {
     })
 })
 */
-document.querySelectorAll(".shop").forEach((e) => {
+/*document.querySelectorAll(".shop").forEach((e) => {
     e.addEventListener("click", (event) =>{
         const id = e.parentElement.parentElement.getAttribute("id");
         let priceString = e.parentElement.childNodes[7].childNodes[0].innerHTML.replace("₹", "");
@@ -234,14 +255,102 @@ document.querySelectorAll(".shop").forEach((e) => {
             // Add the new product to the array if it doesn't already exist
             products.push(product);
             productCount++;
-
-            // Store the updated array and count in local storage
             localStorage.setItem('products', JSON.stringify(products));
             localStorage.setItem('productCount', JSON.stringify(productCount));
+            const productData = localStorage.getItem('productCount');
+                const user = JSON.parse(productCount);
+                console.log(user);
             document.querySelector(".cart span").innerHTML = productCount;
+            const getData = ()=>{
+                const productData = localStorage.getItem('products');
+                const user = JSON.parse(productData);
+                console.log(user);
+            }
         }
         else{
             alert("Already ADDED");
         }
     })
 })
+*/
+// Function to update cart count on page load
+const updateCartCountOnLoad = () => {
+    const productCount = JSON.parse(localStorage.getItem('productCount')) || 0;
+    document.querySelector(".cart span").innerHTML = productCount;
+};
+
+// Call the function to update cart count when the page loads
+document.addEventListener('DOMContentLoaded', updateCartCountOnLoad);
+
+// Add event listeners to all elements with the class "shop"
+document.querySelectorAll(".shop").forEach((e) => {
+    e.addEventListener("click", (event) => {
+        // Get product ID, price, and quantity
+        const id = e.parentElement.parentElement.getAttribute("id");
+        let priceString = e.parentElement.childNodes[7].childNodes[0].innerHTML.replace("₹", "");
+        let price = Number(priceString);
+        let quantityString = e.parentElement.parentElement.childNodes[3].childNodes[11].childNodes[2].childNodes[3].innerHTML;
+        let quantity = Number(quantityString);
+        let total = price * quantity;
+
+        // Create product object
+        let product = {
+            id: id,
+            quantity: quantity,
+            total: total
+        };
+
+        // Retrieve existing products and product count from local storage
+        let products = JSON.parse(localStorage.getItem('products')) || [];
+        let productCount = JSON.parse(localStorage.getItem('productCount')) || 0;
+
+        // Check if product already exists
+        let productExists = products.some(p => p.id === product.id);
+
+        if (!productExists) {
+            // Add the new product to the array if it doesn't already exist
+            products.push(product);
+            productCount++;
+            localStorage.setItem('products', JSON.stringify(products));
+            localStorage.setItem('productCount', JSON.stringify(productCount));
+
+            // Update the cart count display
+            document.querySelector(".cart span").innerHTML = productCount;
+
+            // Log the current products
+            //console.log(products);
+        } else {
+            alert("Already ADDED");
+        }
+    });
+});
+document.querySelector(".cart").addEventListener("click", ()=>{
+    getData();
+})
+let a = 0 ;
+// Function to get and log product data from local storage
+const getData = () => {
+    const productData = localStorage.getItem('products');
+    if (productData) {
+        const products = JSON.parse(productData);
+        //console.log(products);
+        function getProductById(productId) {
+            return products.find(product => product.id === productId);
+        }   
+        const productIdToFind = '2';
+        const product = getProductById(productIdToFind);
+
+if (product) {
+    console.log('Product found:', product);
+    a = product.id;
+    console.log(arr[a]);
+    let clutter = "";
+    clutter += ``;
+} else {
+    console.log('Product not found');
+}     
+    } else {
+        console.log("No products in local storage");
+    }
+};
+
