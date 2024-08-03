@@ -1,7 +1,7 @@
 const scroll = new LocomotiveScroll({
     el: document.querySelector('.container'),
     smooth: true,
-    lerp: 0.05
+    lerp: 0.04
 });
 let alpha;
 const load = () => {
@@ -24,52 +24,52 @@ const load = () => {
     })
 }, 1000);*/
 };
-const menu = () => {
-    document.querySelector(".menu").addEventListener("click", () => {
-        document.querySelector("nav").style.paddingRight = 0;
-        document.querySelector(".navRight").style.alignItems = "center";
-        document.querySelector(".navRight").style.justifyContent = "flex-end";
-        document.querySelector(".navRight").style.flexDirection = "column";
-        document.querySelector(".navRight").style.width = "50%";
-        document.querySelector(".navRight").style.paddingBottom = "3vh";
-        document.querySelector(".navRight").style.gap = "4vh";
-        document.querySelectorAll(".navRight h1, .cart").forEach((e) => {
-            e.style.display = "flex";
+document.addEventListener("DOMContentLoaded",()=>{
+        document.querySelector(".menu").addEventListener("click", () => {
+            document.querySelector(".nav").style.paddingRight = 0;
+            document.querySelector(".navRight").style.alignItems = "center";
+            document.querySelector(".navRight").style.justifyContent = "flex-end";
+            document.querySelector(".navRight").style.flexDirection = "column";
+            document.querySelector(".navRight").style.width = "50%";
+            document.querySelector(".navRight").style.paddingBottom = "3vh";
+            document.querySelector(".navRight").style.gap = "4vh";
+            document.querySelectorAll(".navRight h1, .cart").forEach((e) => {
+                e.style.display = "flex";
+            })
+            document.querySelector(".navRight").style.borderBottomLeftRadius = "44px";
+            document.querySelector(".menu").style.display = "none";
+            document.querySelector(".navRight").style.background = "#fff";
+            document.querySelector(".mark").style.display = "flex";
+            gsap.to(".navRight", {
+                height: "90vh",
+                duration: 0.5
+            })
         })
-        document.querySelector(".navRight").style.borderBottomLeftRadius = "44px";
-        document.querySelector(".menu").style.display = "none";
-        document.querySelector(".navRight").style.background = "#fff";
-        document.querySelector(".mark").style.display = "flex";
-        gsap.to(".navRight", {
-            height: "90vh",
-            duration: 0.5
+        document.querySelector(".mark").addEventListener("click", () => {
+            document.querySelector(".nav").style.paddingRight = "1.6vh";
+            document.querySelector(".navRight").style.alignItems = "flex-end";
+            document.querySelector(".navRight").style.justifyContent = "center";
+            document.querySelector(".navRight").style.flexDirection = "none";
+            document.querySelector(".navRight").style.width = "45%";
+            document.querySelector(".navRight").style.paddingBottom = "0";
+            document.querySelector(".navRight").style.gap = "0";
+            document.querySelectorAll(".navRight h1, .cart").forEach((e) => {
+                e.style.display = "none";
+            })
+            document.querySelector(".navRight").style.borderBottomLeftRadius = "0";
+            document.querySelector(".navRight").style.background = "#fff";
+            document.querySelector(".mark").style.display = "none";
+            gsap.to(".navRight", {
+                height: "8.5vh",
+                duration: 0.5
+            })
+            gsap.to(".menu", {
+                display: "flex",
+                duration: 0.5,
+                delay: 0.2
+            })
         })
-    })
-    document.querySelector(".mark").addEventListener("click", () => {
-        document.querySelector("nav").style.paddingRight = "1.6vh";
-        document.querySelector(".navRight").style.alignItems = "flex-end";
-        document.querySelector(".navRight").style.justifyContent = "center";
-        document.querySelector(".navRight").style.flexDirection = "none";
-        document.querySelector(".navRight").style.width = "45%";
-        document.querySelector(".navRight").style.paddingBottom = "0";
-        document.querySelector(".navRight").style.gap = "0";
-        document.querySelectorAll(".navRight h1, .cart").forEach((e) => {
-            e.style.display = "none";
-        })
-        document.querySelector(".navRight").style.borderBottomLeftRadius = "0";
-        document.querySelector(".navRight").style.background = "#fff";
-        document.querySelector(".mark").style.display = "none";
-        gsap.to(".navRight", {
-            height: "8.5vh",
-            duration: 0.5
-        })
-        gsap.to(".menu", {
-            display: "flex",
-            duration: 0.5,
-            delay: 0.2
-        })
-    })
-};
+});
 const page4Anime = () => {
     document.querySelector(".page4").addEventListener("mouseenter", () => {
         gsap.to(".page4Box1", {
@@ -101,7 +101,6 @@ const page4Anime = () => {
 document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".shop").forEach((e) => {
         e.addEventListener("click", () => {
-            console.log("Hello");
             gsap.to(e, { 
                 duration: 0.5, 
                 scale: 1.05, 
@@ -119,7 +118,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
-menu();
 page4Anime();
 const arr = [
     {
@@ -329,7 +327,7 @@ document.querySelector(".cart").addEventListener("click", ()=>{
 })
 let a = 0 ;
 // Function to get and log product data from local storage
-const getData = () => {
+/*const getData = () => {
     const productData = localStorage.getItem('products');
     if (productData) {
         const products = JSON.parse(productData);
@@ -352,5 +350,5 @@ if (product) {
     } else {
         console.log("No products in local storage");
     }
-};
+};*/
 

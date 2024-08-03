@@ -11,7 +11,6 @@ body{
     align-items: center;
     justify-content: CENTER;
     flex-direction: column;
-   
 } 
 .loading{
     display: flex;

@@ -35,35 +35,37 @@ const arr = [
         const productData = localStorage.getItem('products');
         if (productData) {
             const products = JSON.parse(productData);
+            console.log(products[0].id)
             function getProductById(productId) {
                 return products.find(product => product.id === productId);
-            }   
-            const productIdToFind = '2';
+            }
+            products.forEach((e)=>{
+            const productIdToFind = e.id;
+            console.log(productIdToFind)
             const product = getProductById(productIdToFind);
-    
-    if (product) {
-        console.log('Product found:', product);
-        a = product.id;
-        //console.log(arr[a].productImg);
-        let clutter = "";
-        products.forEach((elm)=>{
-            clutter += `<div class="box1">
-            <div class="title">Laptop</div>
-            <div class="image"><img src="${arr[elm.id].productImg}" alt=""></div>
-            <div class="productName">${arr[elm.id].productName}</div>
-            <div class="productPrice">${elm.total}</div>
-            <div class="quantityBox">
-                <div class="quantityBoxSec">+</div>
-                <div class="quantityBoxSec">${elm.quantity}</div>
-                <div class="quantityBoxSec">-</div>
-            </div>
-            <button class="remove">Remove</button>
-        </div>`;
-        })
-document.querySelector(".container").innerHTML = clutter;
-    } else {
-        console.log('Product not found');
-    }     
+            if (product) {
+                console.log('Product found:', product);
+                a = product.id;
+                let clutter = "";
+                products.forEach((elm)=>{
+                    clutter += `<div class="box1">
+                    <div class="title">${arr[elm.id].productName}</div>
+                    <div class="image"><img src="${arr[elm.id].productImg}" alt=""></div>
+                    <div class="productName">${arr[elm.id].productName}</div>
+                    <div class="productPrice">₹${elm.total}</div>
+                    <div class="quantityBox">
+                        <div class="quantityBoxSec">+</div>
+                        <div class="quantityBoxSec">${elm.quantity}</div>
+                        <div class="quantityBoxSec">-</div>
+                    </div>
+                    <button class="remove">Remove</button>
+                </div>`;
+                })
+        document.querySelector(".container").innerHTML = clutter;
+            } else {
+                console.log('Product not found');
+            } 
+            })   
         } else {
             console.log("No products in local storage");
         }

@@ -63,3 +63,7 @@ footer.innerHTML = `<div class="footerSec footerSec1">
                 </div>
                 </div>
                 `);
+                /*const targetDiv = document.getElementById('targetDiv');
+
+        // Insert the new div after the target div
+        targetDiv.insertAdjacentElement('afterend', newDiv);*/

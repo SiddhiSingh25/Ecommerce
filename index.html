@@ -18,16 +18,16 @@
         <h1 class="logo">S.K MART</h1>
         <div class="navRight">
             <div class="mark"><i class="fa-solid fa-xmark"></i></div>
-            <h1>Home</h1>
-            <h1>About us</h1>
-            <h1>Product</h1>
-            <h1>Contact</h1>
-            <div class="cart"><i class="fa-solid fa-cart-shopping"></i><span>0</span></div>
+            <h1><a href="#home" style="text-decoration: none; color:#222">HOme</a></h1>
+            <h1><a href="#About" style="text-decoration: none; color:#222">About Us</a></h1>
+            <h1><a href="#product" style="text-decoration: none; color:#222">Product</a></h1>
+            <h1><a href="#product" style="text-decoration: none; color:#222">Contact</a></h1>
+            <div class="cart" style="display: flex;"><i class="fa-solid fa-cart-shopping"></i><span>0</span></div>
             <div class="menu"><i class="fa-solid fa-bars"></i></div>
         </div>
     </div>
     <div class="container">
-    <div class="main" data-scroll-speed="0.2">
+    <div class="main" data-scroll data-scroll-speed="0.15" id="home">
         <div class="mainContent">
             <div class="mainLeft">
                 <p>Explore the Latest in Tech Industries</p>
@@ -45,9 +45,9 @@
               </svg>
         </div>
     </div>
-    <div class="page2" data-scroll >
+    <div class="page2" data-scroll data-scroll-speed="0.2">
         <div class="saleSection">
-            <div class="box" data-scroll-speed="-1">
+            <div class="box">
                 <div class="boxLeft">
                     <span>New year sale</span>
                     <p>Get and extra 20% off</p>
@@ -112,7 +112,7 @@
             </div>
         </div>
     </div>
-    <div class="page3" data-scroll>
+    <div class="page3" data-scroll data-scroll-speed="0.2" id="product">
         <div class="page3Head">
             <h1>Why Choose S.K MART</h1>
         <p>Choose S.K EduHub for a holistic, enriching learning experience that empowers you to achieve your goals.</p>
@@ -142,7 +142,7 @@
         </div>
         
     </div>
-    <div class="page4">
+    <div class="page4" id="About" data-scroll data-scroll-speed="0.2">
         <div class="page4head">
             <h1>Why Choose S.K MART</h1>
             <span>Choose S.K EduHub for a holistic, enriching learning experience that empowers you to achieve your goals</span> 
@@ -186,7 +186,6 @@
                 </div>
             </div>
  </div>
-   
     </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
@@ -198,7 +197,6 @@
             integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
             crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="script.js"></script>
-        <script src="nav.js"></script>
         <script src="footer.js"></script>
 </body>
 </html>
