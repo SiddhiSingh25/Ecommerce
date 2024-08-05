@@ -355,3 +355,20 @@ if (product) {
 document.querySelector('.cart').addEventListener('click', function() {
     window.location.href = 'addToCart.html';
 });
+
+/*function removeProductById(productId) {
+    // Retrieve existing products from local storage
+    let products = JSON.parse(localStorage.getItem('products')) || [];
+    
+    // Filter out the product with the specified id
+    products = products.filter(product => product.id !== productId);
+    
+    // Store the updated array back to local storage
+    localStorage.setItem('products', JSON.stringify(products));
+    
+    // Optionally, update the display
+    displayProducts();
+}
+
+// Example usage
+removeProductById('1');*/
