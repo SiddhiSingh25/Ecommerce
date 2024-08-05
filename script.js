@@ -352,3 +352,6 @@ if (product) {
     }
 };*/
 
+document.querySelector('.cart').addEventListener('click', function() {
+    window.location.href = 'addToCart.html';
+});

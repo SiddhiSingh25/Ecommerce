@@ -54,9 +54,9 @@ const arr = [
                     <div class="productName">${arr[elm.id].productName}</div>
                     <div class="productPrice">₹${elm.total}</div>
                     <div class="quantityBox">
-                        <div class="quantityBoxSec">+</div>
+                        <div class="quantityBoxSec increment">+</div>
                         <div class="quantityBoxSec">${elm.quantity}</div>
-                        <div class="quantityBoxSec">-</div>
+                        <div class="quantityBoxSec decrement">-</div>
                     </div>
                     <button class="remove">Remove</button>
                 </div>`;
@@ -71,5 +71,45 @@ const arr = [
         }
     };
     getData();
-    
-    
+    const productCountCart = localStorage.getItem('productCount');
+document.addEventListener("DOMContentLoaded",()=>{
+    document.querySelector(".cart span").innerHTML = productCountCart;
+})
+//Increment Decrement
+document.querySelectorAll(".increment").forEach((e) => {
+    e.addEventListener("click", (event) => {
+        let stock = Number(e.parentElement.childNodes[3].innerHTML);
+        let currentValue = parseInt(e.parentElement.childNodes[3].innerHTML) || 1;
+        let priceString = e.parentElement.parentElement.childNodes[7].innerHTML.replace("₹", "");
+        let price = Number(priceString);
+        let quantityString = e.parentElement.childNodes[3].innerHTML.innerHTML;
+        let quantity = Number(quantityString);
+        let total = price * quantity;
+        /*if (currentValue < stock) {
+            currentValue += 1;
+            e.parentElement.parentElement.childNodes[7].innerHTML = currentValue;
+        }
+        else if (currentValue === stock) {
+            currentValue = stock;
+        }
+        else{
+            console.log("hello")
+        }*/
+       console.log(typeof currentValue);
+       console.log(currentValue)
+    })
+})
+/*document.querySelectorAll(".decrement").forEach((e) => {
+    e.addEventListener("click", (event) => {
+        let stock = e.parentElement.parentElement.parentElement.childNodes[9].childNodes[1].innerHTML;
+        let currentValue = parseInt(e.parentElement.childNodes[3].innerHTML) || 1;
+        if (currentValue > 1) {
+            currentValue -= 1;
+            e.parentElement.childNodes[3].innerHTML = currentValue;
+        }
+        else if (currentValue === stock) {
+            currentValue = stock;
+        }
+    })
+})*/
+    /*mujhe addcart wala parrt me increment decrement krna aur remove krne hai  */
