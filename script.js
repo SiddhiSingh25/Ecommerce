@@ -1,4 +1,4 @@
-const scroll = new LocomotiveScroll({
+/*const scroll = new LocomotiveScroll({
     el: document.querySelector('.container'),
     smooth: true,
     lerp: 0.04
@@ -22,8 +22,8 @@ const load = () => {
         scale : 0.95, 
         duration  :0.9
     })
-}, 1000);*/
-};
+}, 1000);
+};*/
 document.addEventListener("DOMContentLoaded",()=>{
         document.querySelector(".menu").addEventListener("click", () => {
             document.querySelector(".nav").style.paddingRight = 0;

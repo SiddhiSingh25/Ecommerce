@@ -317,6 +317,24 @@ body {
     padding: 0 1vh;
     font-size: 2.2vh;
 }
+.catchMe {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 94vw;
+}
+.catchMe a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+.catchMe .social-icons {
+    margin-top: 10px;
+}
+.catchMe .social-icons ion-icon {
+    font-size: 24px;
+}
 @media (max-width:600px){
     .hero{
         min-height: fit-content;
@@ -332,7 +350,7 @@ body {
     }
     .container {
         min-height: min-content;
-        margin: 4vh;
+        margin: 12vh;
     }
     .alpha{
         min-height: min-content;
@@ -375,6 +393,11 @@ body {
     .remove {
         padding: 1.1vh 3.5vh;
         font-size: 2.8vh;
+    }
+    .menu{
+        display: flex;
+        font-weight: 900;
+        font-size: 3.2vh;
     }
     .productName {
         font-size: 2.8vh;
@@ -437,5 +460,33 @@ body {
     }
     .card{
         width: 80%;
+    }
+    .navRight {
+        align-items: center;
+        justify-content: flex-start;
+        gap: 1vh;
+        flex-direction: row-reverse;
+    }
+}
+@media (max-width: 600px) {
+    .catchMe {
+        padding: 15px;
+    }
+    .catchMe .social-icons ion-icon {
+        font-size: 20px;
+    }
+    .catchMe a {
+        margin: 0 5px;
+    }
+}
+@media (max-width: 400px) {
+    .catchMe p {
+        font-size: 14px;
+    }
+    .catchMe .social-icons ion-icon {
+        font-size: 18px;
+    }
+    .catchMe a {
+        margin: 0 3px;
     }
 }
