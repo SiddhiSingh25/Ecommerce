@@ -5,9 +5,9 @@ newDiv.innerHTML = `<h1 class="logo">S.K MART</h1>
         <div class="navRight">
             <div class="mark"><i class="fa-solid fa-xmark"></i></div>
             <h1><a href="index.html#home" style="text-decoration: none; color:#222">HOme</a></h1>
-            <h1><a href="#About" style="text-decoration: none; color:#222">About Us</a></h1>
-            <h1><a href="#product" style="text-decoration: none; color:#222">Product</a></h1>
-            <h1><a href="#product" style="text-decoration: none; color:#222">Contact</a></h1>
+            <h1><a href="index.html#About" style="text-decoration: none; color:#222">About Us</a></h1>
+            <h1><a href="index.html#product" style="text-decoration: none; color:#222">Product</a></h1>
+            <h1><a href="index.html#product" style="text-decoration: none; color:#222">Contact</a></h1>
             <div class="cart" style="display: flex;"><i class="fa-solid fa-cart-shopping"></i><span>0</span></div>
             <div class="menu"><i class="fa-solid fa-bars"></i></div>
         </div>`;
@@ -58,4 +58,15 @@ document.addEventListener("DOMContentLoaded",()=>{
         })
     })
 });
-
+const load = () => {
+    setTimeout(() => {
+    document.querySelector(".container").style.display = "flex";
+    document.querySelector(".nav").style.display = "flex";
+    document.querySelector(".container").style.scale = 1;
+    gsap.from(".nav",{
+        y : -70,
+        duration : 0.6
+    })
+}, 100);
+};
+load();

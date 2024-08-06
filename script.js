@@ -2,15 +2,14 @@
     el: document.querySelector('.container'),
     smooth: true,
     lerp: 0.04
-});
+});*/
 let alpha;
 const load = () => {
-    /*setTimeout(() => {
-    document.querySelector(".loading").style.display = "none";
+    setTimeout(() => {
     document.querySelector(".container").style.display = "flex";
-    document.querySelector("nav").style.display = "flex";
+    document.querySelector(".nav").style.display = "flex";
     document.querySelector(".container").style.scale = 1;
-    gsap.from("nav",{
+    gsap.from(".nav",{
         y : -70,
         duration : 0.6
     })
@@ -22,259 +21,260 @@ const load = () => {
         scale : 0.95, 
         duration  :0.9
     })
-}, 1000);
-};*/
+}, 100);
+};
+load();
 document.addEventListener("DOMContentLoaded",()=>{
-        document.querySelector(".menu").addEventListener("click", () => {
-            document.querySelector(".nav").style.paddingRight = 0;
-            document.querySelector(".navRight").style.alignItems = "center";
-            document.querySelector(".navRight").style.justifyContent = "flex-end";
-            document.querySelector(".navRight").style.flexDirection = "column";
-            document.querySelector(".navRight").style.width = "50%";
-            document.querySelector(".navRight").style.paddingBottom = "3vh";
-            document.querySelector(".navRight").style.gap = "4vh";
-            document.querySelectorAll(".navRight h1, .cart").forEach((e) => {
-                e.style.display = "flex";
-            })
-            document.querySelector(".navRight").style.borderBottomLeftRadius = "44px";
-            document.querySelector(".menu").style.display = "none";
-            document.querySelector(".navRight").style.background = "#fff";
-            document.querySelector(".mark").style.display = "flex";
-            gsap.to(".navRight", {
-                height: "90vh",
-                duration: 0.5
-            })
+    document.querySelector(".menu").addEventListener("click", () => {
+        document.querySelector(".nav").style.paddingRight = 0;
+        document.querySelector(".navRight").style.alignItems = "center";
+        document.querySelector(".navRight").style.justifyContent = "flex-end";
+        document.querySelector(".navRight").style.flexDirection = "column";
+        document.querySelector(".navRight").style.width = "50%";
+        document.querySelector(".navRight").style.paddingBottom = "3vh";
+        document.querySelector(".navRight").style.gap = "4vh";
+        document.querySelectorAll(".navRight h1, .cart").forEach((e) => {
+            e.style.display = "flex";
         })
-        document.querySelector(".mark").addEventListener("click", () => {
-            document.querySelector(".nav").style.paddingRight = "1.6vh";
-            document.querySelector(".navRight").style.alignItems = "flex-end";
-            document.querySelector(".navRight").style.justifyContent = "center";
-            document.querySelector(".navRight").style.flexDirection = "none";
-            document.querySelector(".navRight").style.width = "45%";
-            document.querySelector(".navRight").style.paddingBottom = "0";
-            document.querySelector(".navRight").style.gap = "0";
-            document.querySelectorAll(".navRight h1, .cart").forEach((e) => {
-                e.style.display = "none";
-            })
-            document.querySelector(".navRight").style.borderBottomLeftRadius = "0";
-            document.querySelector(".navRight").style.background = "#fff";
-            document.querySelector(".mark").style.display = "none";
-            gsap.to(".navRight", {
-                height: "8.5vh",
-                duration: 0.5
-            })
-            gsap.to(".menu", {
-                display: "flex",
-                duration: 0.5,
-                delay: 0.2
-            })
+        document.querySelector(".navRight").style.borderBottomLeftRadius = "44px";
+        document.querySelector(".menu").style.display = "none";
+        document.querySelector(".navRight").style.background = "#fff";
+        document.querySelector(".mark").style.display = "flex";
+        gsap.to(".navRight", {
+            height: "90vh",
+            duration: 0.5
         })
+    })
+    document.querySelector(".mark").addEventListener("click", () => {
+        document.querySelector(".nav").style.paddingRight = "1.6vh";
+        document.querySelector(".navRight").style.alignItems = "flex-end";
+        document.querySelector(".navRight").style.justifyContent = "center";
+        document.querySelector(".navRight").style.flexDirection = "none";
+        document.querySelector(".navRight").style.width = "45%";
+        document.querySelector(".navRight").style.paddingBottom = "0";
+        document.querySelector(".navRight").style.gap = "0";
+        document.querySelectorAll(".navRight h1, .cart").forEach((e) => {
+            e.style.display = "none";
+        })
+        document.querySelector(".navRight").style.borderBottomLeftRadius = "0";
+        document.querySelector(".navRight").style.background = "#fff";
+        document.querySelector(".mark").style.display = "none";
+        gsap.to(".navRight", {
+            height: "8.5vh",
+            duration: 0.5
+        })
+        gsap.to(".menu", {
+            display: "flex",
+            duration: 0.5,
+            delay: 0.2
+        })
+    })
 });
 const page4Anime = () => {
-    document.querySelector(".page4").addEventListener("mouseenter", () => {
-        gsap.to(".page4Box1", {
-            scale: 1,
-            duration: 0.8
-        }),
-            gsap.to(".page4Box2", {
-                scale: 1,
-                duration: 0.8,
-                delay: 0.4
-            }),
-            gsap.to(".pageSectionImg", {
-                scale: 1,
-                duration: 0.8,
-                delay: 0.8
-            })
-        gsap.to(".page4Box3", {
+document.querySelector(".page4").addEventListener("mouseenter", () => {
+    gsap.to(".page4Box1", {
+        scale: 1,
+        duration: 0.8
+    }),
+        gsap.to(".page4Box2", {
             scale: 1,
             duration: 0.8,
-            delay: 1.2
+            delay: 0.4
         }),
-            gsap.to(".page4Box4", {
-                scale: 1,
-                duration: 0.8,
-                delay: 1.6
-            })
-    });
+        gsap.to(".pageSectionImg", {
+            scale: 1,
+            duration: 0.8,
+            delay: 0.8
+        })
+    gsap.to(".page4Box3", {
+        scale: 1,
+        duration: 0.8,
+        delay: 1.2
+    }),
+        gsap.to(".page4Box4", {
+            scale: 1,
+            duration: 0.8,
+            delay: 1.6
+        })
+});
 };
 document.addEventListener("DOMContentLoaded", () => {
-    document.querySelectorAll(".shop").forEach((e) => {
-        e.addEventListener("click", () => {
-            gsap.to(e, { 
-                duration: 0.5, 
-                scale: 1.05, 
-                backgroundColor: "#101010",
-                ease: "elastic.out(1, 0.3)",
-                onComplete: () => {
-                    gsap.to(e, { 
-                        duration: 0.4, 
-                        scale: 1, 
-                        backgroundColor: "#007bff",
-                        ease: "elastic.out(1, 0.3)"
-                    });
-                }
-            });
+document.querySelectorAll(".shop").forEach((e) => {
+    e.addEventListener("click", () => {
+        gsap.to(e, { 
+            duration: 0.5, 
+            scale: 1.05, 
+            backgroundColor: "#101010",
+            ease: "elastic.out(1, 0.3)",
+            onComplete: () => {
+                gsap.to(e, { 
+                    duration: 0.4, 
+                    scale: 1, 
+                    backgroundColor: "#007bff",
+                    ease: "elastic.out(1, 0.3)"
+                });
+            }
         });
     });
 });
+});
 page4Anime();
 const arr = [
-    {
-        productImg: "https://jscourse.csscourse.online/images/lapi.png", productName: "Laptop",
-        discription: "Powerful laptop with a quad-core i5 processor, 8GB RAM, 256GB SSD, and a 14-inch FHD display.", price: "₹5500",
-        actualPrice: "₹58,000", stocks: 50
-    },
-    {
-        productImg: "https://jscourse.csscourse.online/images/iphone.png", productName: "IPhone",
-        discription: "Powerful laptop with a quad-core i5 processor, 8GB RAM, 256GB SSD, and a 14-inch FHD display.", price: "₹3500",
-        actualPrice: "₹3800", stocks: 45
-    },
-    {
-        productImg: "https://jscourse.csscourse.online/images/headphone.png", productName: "Headphone",
-        discription: "Powerful laptop with a quad-core i5 processor, 8GB RAM, 256GB SSD, and a 14-inch FHD display.", price: "₹1400",
-        actualPrice: "₹1500", stocks: 26
-    },
-    {
-        productImg: "https://jscourse.csscourse.online/images/watch.png", productName: "Watch",
-        discription: "Powerful laptop with a quad-core i5 processor, 8GB RAM, 256GB SSD, and a 14-inch FHD display.", price: "₹5500",
-        actualPrice: "₹5800", stocks: 36
-    },
-    {
-        productImg: "https://jscourse.csscourse.online/images/speakers.png", productName: "Speakers",
-        discription: "Powerful laptop with a quad-core i5 processor, 8GB RAM, 256GB SSD, and a 14-inch FHD display.", price: "₹2100",
-        actualPrice: "₹2800", stocks: 33
-    },
-    {
-        productImg: "https://jscourse.csscourse.online/images/tv.png", productName: "Telivision",
-        discription: "Powerful laptop with a quad-core i5 processor, 8GB RAM, 256GB SSD, and a 14-inch FHD display.", price: "₹3300",
-        actualPrice: "₹3400", stocks: 7
-    }];
+{
+    productImg: "https://jscourse.csscourse.online/images/lapi.png", productName: "Laptop",
+    discription: "Powerful laptop with a quad-core i5 processor, 8GB RAM, 256GB SSD, and a 14-inch FHD display.", price: "₹5500",
+    actualPrice: "₹58,000", stocks: 50
+},
+{
+    productImg: "https://jscourse.csscourse.online/images/iphone.png", productName: "IPhone",
+    discription: "Powerful laptop with a quad-core i5 processor, 8GB RAM, 256GB SSD, and a 14-inch FHD display.", price: "₹3500",
+    actualPrice: "₹3800", stocks: 45
+},
+{
+    productImg: "https://jscourse.csscourse.online/images/headphone.png", productName: "Headphone",
+    discription: "Powerful laptop with a quad-core i5 processor, 8GB RAM, 256GB SSD, and a 14-inch FHD display.", price: "₹1400",
+    actualPrice: "₹1500", stocks: 26
+},
+{
+    productImg: "https://jscourse.csscourse.online/images/watch.png", productName: "Watch",
+    discription: "Powerful laptop with a quad-core i5 processor, 8GB RAM, 256GB SSD, and a 14-inch FHD display.", price: "₹5500",
+    actualPrice: "₹5800", stocks: 36
+},
+{
+    productImg: "https://jscourse.csscourse.online/images/speakers.png", productName: "Speakers",
+    discription: "Powerful laptop with a quad-core i5 processor, 8GB RAM, 256GB SSD, and a 14-inch FHD display.", price: "₹2100",
+    actualPrice: "₹2800", stocks: 33
+},
+{
+    productImg: "https://jscourse.csscourse.online/images/tv.png", productName: "Telivision",
+    discription: "Powerful laptop with a quad-core i5 processor, 8GB RAM, 256GB SSD, and a 14-inch FHD display.", price: "₹3300",
+    actualPrice: "₹3400", stocks: 7
+}];
 
 let clutter = "";
 arr.forEach((elm, idx) => {
-    clutter += `<div class="product" id="${idx}">
-                <div class="productTop">
-                    <img src="${elm.productImg}" alt="">
+clutter += `<div class="product" id="${idx}">
+            <div class="productTop">
+                <img src="${elm.productImg}" alt="">
+            </div>
+            <div class="productBottom">
+                <div class="productName">${elm.productName}</div>
+                <div class="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                <div class="discription">
+                    ${elm.discription}
                 </div>
-                <div class="productBottom">
-                    <div class="productName">${elm.productName}</div>
-                    <div class="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                    <div class="discription">
-                        ${elm.discription}
-                    </div>
-                    <div class="price"><p>${elm.price}</p> &nbsp;<span>${elm.actualPrice}</span></div>
-                    <div class="stocks">Total stocks available : <span>${elm.stocks}</span></div>
-                    <div class="quantity"><div class="quantityHead">Quantity(Pieces)</div> <div class="quantityBox">
-                        <button class="quantityBoxSec increment">+</button>
-                        <button class="quantityBoxSec quantityValue">1</button>
-                        <button class="quantityBoxSec decrement">-</button>
-                    </div></div>
-                    <button class ="shop">Add to cart <i class="fa-solid fa-cart-shopping"></i></button>
-                </div>
-            </div>`;
+                <div class="price"><p>${elm.price}</p> &nbsp;<span>${elm.actualPrice}</span></div>
+                <div class="stocks">Total stocks available : <span>${elm.stocks}</span></div>
+                <div class="quantity"><div class="quantityHead">Quantity(Pieces)</div> <div class="quantityBox">
+                    <button class="quantityBoxSec increment">+</button>
+                    <button class="quantityBoxSec quantityValue">1</button>
+                    <button class="quantityBoxSec decrement">-</button>
+                </div></div>
+                <button class ="shop">Add to cart <i class="fa-solid fa-cart-shopping"></i></button>
+            </div>
+        </div>`;
 })
 let currentValue;
 document.querySelector(".page3Bottom").innerHTML = clutter;
 document.querySelectorAll(".increment").forEach((e) => {
-    e.addEventListener("click", (event) => {
-        let stock = e.parentElement.parentElement.parentElement.childNodes[9].childNodes[1].innerHTML;
-        currentValue = parseInt(e.parentElement.childNodes[3].innerHTML) || 1;
-        if (currentValue < stock) {
-            currentValue += 1;
-            e.parentElement.childNodes[3].innerHTML = currentValue;
-        }
-        else if (currentValue === stock) {
-            currentValue = stock;
-        }
-    })
+e.addEventListener("click", (event) => {
+    let stock = e.parentElement.parentElement.parentElement.childNodes[9].childNodes[1].innerHTML;
+    currentValue = parseInt(e.parentElement.childNodes[3].innerHTML) || 1;
+    if (currentValue < stock) {
+        currentValue += 1;
+        e.parentElement.childNodes[3].innerHTML = currentValue;
+    }
+    else if (currentValue === stock) {
+        currentValue = stock;
+    }
+})
 })
 document.querySelectorAll(".decrement").forEach((e) => {
-    e.addEventListener("click", (event) => {
-        let stock = e.parentElement.parentElement.parentElement.childNodes[9].childNodes[1].innerHTML;
-        let currentValue = parseInt(e.parentElement.childNodes[3].innerHTML) || 1;
-        if (currentValue > 1) {
-            currentValue -= 1;
-            e.parentElement.childNodes[3].innerHTML = currentValue;
-        }
-        else if (currentValue === stock) {
-            currentValue = stock;
-        }
-    })
+e.addEventListener("click", (event) => {
+    let stock = e.parentElement.parentElement.parentElement.childNodes[9].childNodes[1].innerHTML;
+    let currentValue = parseInt(e.parentElement.childNodes[3].innerHTML) || 1;
+    if (currentValue > 1) {
+        currentValue -= 1;
+        e.parentElement.childNodes[3].innerHTML = currentValue;
+    }
+    else if (currentValue === stock) {
+        currentValue = stock;
+    }
+})
 })
 /*document.querySelectorAll(".shop").forEach((e) => {
-    e.addEventListener("click", (event) => {
+e.addEventListener("click", (event) => {
+    let cartProducts = localStorage.getItem("cartProductLS");
+    let getCartProductFromLS = ()=>{
         let cartProducts = localStorage.getItem("cartProductLS");
-        let getCartProductFromLS = ()=>{
-            let cartProducts = localStorage.getItem("cartProductLS");
-                if (!cartProducts) {
-                    return [];
-                }
-                cartProducts = JSON.parse(cartProducts);
-                document.querySelector(".cart span").innerHTML = cartProducts.length;
-                return cartProducts;
-        };
-        getCartProductFromLS();
-        const id = e.parentElement.parentElement.getAttribute("id");
-        let priceString = e.parentElement.childNodes[7].childNodes[0].innerHTML.replace("₹", "");
-        let price = Number(priceString);
-        let quantityString = e.parentElement.parentElement.childNodes[3].childNodes[11].childNodes[2].childNodes[3].innerHTML;
-        let quantity = Number(quantityString);
-        let total = price * quantity;
-        const arrLocalStorageProduct =  getCartProductFromLS();
-        arrLocalStorageProduct.push({id, quantity, total });
-        localStorage.setItem("cartProductLS", JSON.stringify(cartProducts));
-        let existingProd = arrLocalStorageProduct.find((currProd)=>currProd.id === id);
-        if(existingProd){
-            return false;
-        }
-    })
+            if (!cartProducts) {
+                return [];
+            }
+            cartProducts = JSON.parse(cartProducts);
+            document.querySelector(".cart span").innerHTML = cartProducts.length;
+            return cartProducts;
+    };
+    getCartProductFromLS();
+    const id = e.parentElement.parentElement.getAttribute("id");
+    let priceString = e.parentElement.childNodes[7].childNodes[0].innerHTML.replace("₹", "");
+    let price = Number(priceString);
+    let quantityString = e.parentElement.parentElement.childNodes[3].childNodes[11].childNodes[2].childNodes[3].innerHTML;
+    let quantity = Number(quantityString);
+    let total = price * quantity;
+    const arrLocalStorageProduct =  getCartProductFromLS();
+    arrLocalStorageProduct.push({id, quantity, total });
+    localStorage.setItem("cartProductLS", JSON.stringify(cartProducts));
+    let existingProd = arrLocalStorageProduct.find((currProd)=>currProd.id === id);
+    if(existingProd){
+        return false;
+    }
+})
 })
 */
 /*document.querySelectorAll(".shop").forEach((e) => {
-    e.addEventListener("click", (event) =>{
-        const id = e.parentElement.parentElement.getAttribute("id");
-        let priceString = e.parentElement.childNodes[7].childNodes[0].innerHTML.replace("₹", "");
-        let price = Number(priceString);
-        let quantityString = e.parentElement.parentElement.childNodes[3].childNodes[11].childNodes[2].childNodes[3].innerHTML;
-        let quantity = Number(quantityString);
-        let total = price * quantity;
-        let product = {
-            id : id,
-            quantity : quantity,
-            total : total
-        };
-        let products = JSON.parse(localStorage.getItem('products')) || [];
-        let productCount = JSON.parse(localStorage.getItem('productCount')) || 0;
-        //products.push(product);
-        //localStorage.setItem('products', JSON.stringify(products));
-        let productExists = products.some(p => p.id === product.id);
-        if (!productExists) {
-            // Add the new product to the array if it doesn't already exist
-            products.push(product);
-            productCount++;
-            localStorage.setItem('products', JSON.stringify(products));
-            localStorage.setItem('productCount', JSON.stringify(productCount));
-            const productData = localStorage.getItem('productCount');
-                const user = JSON.parse(productCount);
-                console.log(user);
-            document.querySelector(".cart span").innerHTML = productCount;
-            const getData = ()=>{
-                const productData = localStorage.getItem('products');
-                const user = JSON.parse(productData);
-                console.log(user);
-            }
+e.addEventListener("click", (event) =>{
+    const id = e.parentElement.parentElement.getAttribute("id");
+    let priceString = e.parentElement.childNodes[7].childNodes[0].innerHTML.replace("₹", "");
+    let price = Number(priceString);
+    let quantityString = e.parentElement.parentElement.childNodes[3].childNodes[11].childNodes[2].childNodes[3].innerHTML;
+    let quantity = Number(quantityString);
+    let total = price * quantity;
+    let product = {
+        id : id,
+        quantity : quantity,
+        total : total
+    };
+    let products = JSON.parse(localStorage.getItem('products')) || [];
+    let productCount = JSON.parse(localStorage.getItem('productCount')) || 0;
+    //products.push(product);
+    //localStorage.setItem('products', JSON.stringify(products));
+    let productExists = products.some(p => p.id === product.id);
+    if (!productExists) {
+        // Add the new product to the array if it doesn't already exist
+        products.push(product);
+        productCount++;
+        localStorage.setItem('products', JSON.stringify(products));
+        localStorage.setItem('productCount', JSON.stringify(productCount));
+        const productData = localStorage.getItem('productCount');
+            const user = JSON.parse(productCount);
+            console.log(user);
+        document.querySelector(".cart span").innerHTML = productCount;
+        const getData = ()=>{
+            const productData = localStorage.getItem('products');
+            const user = JSON.parse(productData);
+            console.log(user);
         }
-        else{
-            alert("Already ADDED");
-        }
-    })
+    }
+    else{
+        alert("Already ADDED");
+    }
+})
 })
 */
 // Function to update cart count on page load
 const updateCartCountOnLoad = () => {
-    const productCount = JSON.parse(localStorage.getItem('productCount')) || 0;
-    document.querySelector(".cart span").innerHTML = productCount;
+const productCount = JSON.parse(localStorage.getItem('productCount')) || 0;
+document.querySelector(".cart span").innerHTML = productCount;
 };
 
 // Call the function to update cart count when the page loads
@@ -282,92 +282,92 @@ document.addEventListener('DOMContentLoaded', updateCartCountOnLoad);
 
 // Add event listeners to all elements with the class "shop"
 document.querySelectorAll(".shop").forEach((e) => {
-    e.addEventListener("click", (event) => {
-        // Get product ID, price, and quantity
-        const id = e.parentElement.parentElement.getAttribute("id");
-        let priceString = e.parentElement.childNodes[7].childNodes[0].innerHTML.replace("₹", "");
-        let price = Number(priceString);
-        let quantityString = e.parentElement.parentElement.childNodes[3].childNodes[11].childNodes[2].childNodes[3].innerHTML;
-        let quantity = Number(quantityString);
-        let total = price * quantity;
+e.addEventListener("click", (event) => {
+    // Get product ID, price, and quantity
+    const id = e.parentElement.parentElement.getAttribute("id");
+    let priceString = e.parentElement.childNodes[7].childNodes[0].innerHTML.replace("₹", "");
+    let price = Number(priceString);
+    let quantityString = e.parentElement.parentElement.childNodes[3].childNodes[11].childNodes[2].childNodes[3].innerHTML;
+    let quantity = Number(quantityString);
+    let total = price * quantity;
 
-        // Create product object
-        let product = {
-            id: id,
-            quantity: quantity,
-            total: total
-        };
+    // Create product object
+    let product = {
+        id: id,
+        quantity: quantity,
+        total: total
+    };
 
-        // Retrieve existing products and product count from local storage
-        let products = JSON.parse(localStorage.getItem('products')) || [];
-        let productCount = JSON.parse(localStorage.getItem('productCount')) || 0;
+    // Retrieve existing products and product count from local storage
+    let products = JSON.parse(localStorage.getItem('products')) || [];
+    let productCount = JSON.parse(localStorage.getItem('productCount')) || 0;
 
-        // Check if product already exists
-        let productExists = products.some(p => p.id === product.id);
+    // Check if product already exists
+    let productExists = products.some(p => p.id === product.id);
 
-        if (!productExists) {
-            // Add the new product to the array if it doesn't already exist
-            products.push(product);
-            productCount++;
-            localStorage.setItem('products', JSON.stringify(products));
-            localStorage.setItem('productCount', JSON.stringify(productCount));
+    if (!productExists) {
+        // Add the new product to the array if it doesn't already exist
+        products.push(product);
+        productCount++;
+        localStorage.setItem('products', JSON.stringify(products));
+        localStorage.setItem('productCount', JSON.stringify(productCount));
 
-            // Update the cart count display
-            document.querySelector(".cart span").innerHTML = productCount;
+        // Update the cart count display
+        document.querySelector(".cart span").innerHTML = productCount;
 
-            // Log the current products
-            //console.log(products);
-        } else {
-            alert("Already ADDED");
-        }
-    });
+        // Log the current products
+        //console.log(products);
+    } else {
+        alert("Already ADDED");
+    }
+});
 });
 document.querySelector(".cart").addEventListener("click", ()=>{
-    getData();
+getData();
 })
 let a = 0 ;
 // Function to get and log product data from local storage
 /*const getData = () => {
-    const productData = localStorage.getItem('products');
-    if (productData) {
-        const products = JSON.parse(productData);
-        //console.log(products);
-        function getProductById(productId) {
-            return products.find(product => product.id === productId);
-        }   
-        const productIdToFind = '2';
-        const product = getProductById(productIdToFind);
+const productData = localStorage.getItem('products');
+if (productData) {
+    const products = JSON.parse(productData);
+    //console.log(products);
+    function getProductById(productId) {
+        return products.find(product => product.id === productId);
+    }   
+    const productIdToFind = '2';
+    const product = getProductById(productIdToFind);
 
 if (product) {
-    console.log('Product found:', product);
-    a = product.id;
-    console.log(arr[a]);
-    let clutter = "";
-    clutter += ``;
+console.log('Product found:', product);
+a = product.id;
+console.log(arr[a]);
+let clutter = "";
+clutter += ``;
 } else {
-    console.log('Product not found');
+console.log('Product not found');
 }     
-    } else {
-        console.log("No products in local storage");
-    }
+} else {
+    console.log("No products in local storage");
+}
 };*/
 
 document.querySelector('.cart').addEventListener('click', function() {
-    window.location.href = 'addToCart.html';
+window.location.href = 'addToCart.html';
 });
 
 /*function removeProductById(productId) {
-    // Retrieve existing products from local storage
-    let products = JSON.parse(localStorage.getItem('products')) || [];
-    
-    // Filter out the product with the specified id
-    products = products.filter(product => product.id !== productId);
-    
-    // Store the updated array back to local storage
-    localStorage.setItem('products', JSON.stringify(products));
-    
-    // Optionally, update the display
-    displayProducts();
+// Retrieve existing products from local storage
+let products = JSON.parse(localStorage.getItem('products')) || [];
+
+// Filter out the product with the specified id
+products = products.filter(product => product.id !== productId);
+
+// Store the updated array back to local storage
+localStorage.setItem('products', JSON.stringify(products));
+
+// Optionally, update the display
+displayProducts();
 }
 
 // Example usage

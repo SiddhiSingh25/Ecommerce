@@ -33,7 +33,7 @@ body {
 }
 
 .container {
-    min-height: 100vh;
+    min-height: fit-content;
     width: 92vw;
     display: flex;
     align-items: center;
@@ -44,7 +44,7 @@ body {
     border-bottom: .08rem solid #d8d8d8;
 }
 .alpha{
-    min-height: 100vh;
+    min-height: fit-content;
     width: 92vw;
     display: flex;
     align-items: center;
