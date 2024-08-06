@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -6,26 +6,36 @@
     font-family: Poppins;
     font-weight: 400;
 }
-body{
+
+body {
     display: flex;
     align-items: center;
     justify-content: CENTER;
     flex-direction: column;
-} 
-.loading{
+}
+
+.loading {
     display: flex;
 }
-.container{
+
+button:hover {
+    cursor: pointer;
+}
+
+.container {
     align-items: center;
     justify-content: CENTER;
     flex-direction: column;
-    display:flex;
+    display: flex;
 }
-.menu, .mark{
+
+.menu,
+.mark {
     font-size: 3vh;
     display: none;
 }
-.main{
+
+.main {
     height: 100vh;
     width: 94vw;
     background: linear-gradient(to RIGHT, #8fbcff, #c0e5fc);
@@ -36,7 +46,35 @@ body{
     box-shadow: 0px 1px 8px 0px #888888;
     position: relative;
 }
-.nav{
+
+.contact,
+.cart {
+    cursor: pointer;
+    position: relative;
+}
+
+.contact::after,
+.cart::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: linear-gradient(to right, #515151, #b5b5b5);
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.4s;
+}
+
+.contact:hover::after,
+.cart:hover::after {
+    width: 100%;
+}
+
+.nav h1 {
+    position: relative;
+}
+
+.nav {
     height: 8.5vh;
     background-color: #fff;
     width: 100vw;
@@ -51,7 +89,8 @@ body{
     box-shadow: 0px 0px 20px 0px #888888ff;
     display: flex;
 }
-.nav h1 a::after{
+
+.nav h1 a::after {
     content: '';
     width: 0;
     height: 3px;
@@ -61,14 +100,16 @@ body{
     bottom: -6px;
     transition: 0.4s;
 }
-.nav h1 a:hover::after
-{
+
+.nav h1 a:hover::after {
     width: 100%;
 }
-.nav h1{
+
+.nav h1 {
     position: relative;
 }
-.logo{
+
+.logo {
     font-size: 3vh;
     min-width: 14%;
     text-decoration: underline;
@@ -77,16 +118,18 @@ body{
     padding: 10px 0;
     text-shadow: 0 .2rem .3rem rgba(0, 0, 0, 0.4);
 }
-.navRight{
+
+.navRight {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width:40% ;
+    width: 40%;
     text-transform: uppercase;
     font-size: 1.3vh;
     font-weight: 700;
 }
-.cart{
+
+.cart {
     padding: 4px 8px;
     background-color: #222;
     color: #eee;
@@ -97,44 +140,53 @@ body{
     gap: 8px;
     cursor: pointer;
 }
+
 .cart i {
     font-size: 3vh;
 }
-.cart span{
+
+.cart span {
     font-size: 2.7vh;
     display: inline-block;
 }
-.mainContent{
+
+.mainContent {
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 100%;
     width: 100%;
 }
-.mainLeft{
-    width: 55%; 
-    padding: 0 8vh ;
+
+.mainLeft {
+    width: 55%;
+    padding: 0 8vh;
 }
-.mainRight{
+
+.mainRight {
     width: 45%;
 }
-.mainRight img{
+
+.mainRight img {
     object-fit: contain;
     object-position: center;
     height: 100%;
     width: 100%;
     scale: 0.7;
 }
+
 .mainLeft p {
     font-size: 2.6vh;
     text-transform: uppercase;
     letter-spacing: 1.2px;
     margin-bottom: 10px;
 }
+
 .mainLeft h1 {
     font-size: 6vh;
     font-weight: 700;
 }
+
 .mainLeft span {
     color: #fff;
     font-size: 2.8vh;
@@ -142,6 +194,7 @@ body{
     display: inline-block;
     margin-bottom: 24px;
 }
+
 .mainLeft button {
     padding: 8px 16px;
     background-color: #111;
@@ -149,36 +202,40 @@ body{
     font-size: 2.2vh;
     text-transform: uppercase;
     border-radius: 10px;
-    
+
 }
-.mainContent svg{
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        overflow: hidden;
-        line-height: 0;
-        transform: rotate(180deg);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        filter: invert(1);
-        width: 100%;
-        height: 20vh;
+
+.mainContent svg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: invert(1);
+    width: 100%;
+    height: 20vh;
 }
-.page2{
+
+.page2 {
     max-height: 100vh;
     width: 100vw;
     padding: 0 8vh;
     background-color: #f7f7f7;
 }
-.saleSection{
+
+.saleSection {
     height: 35vh;
     display: flex;
     align-items: center;
     justify-content: space-around;
     margin-top: 10vh;
 }
-.saleSection .box{
+
+.saleSection .box {
     height: 100%;
     width: 33%;
     display: flex;
@@ -186,12 +243,14 @@ body{
     justify-content: space-between;
     background-color: #fefefe;
 }
-.boxLeft{
+
+.boxLeft {
     width: 55%;
     padding: 5vh 1.5vh;
 
 }
-.boxRight{
+
+.boxRight {
     width: 45%;
     display: flex;
     align-items: center;
@@ -200,7 +259,8 @@ body{
     height: 100%;
     padding: 5vh 0.8vh;
 }
-.saleSection .box span{
+
+.saleSection .box span {
     color: #668dc9;
     font-size: 2.2vh;
     display: inline-block;
@@ -209,21 +269,24 @@ body{
     margin-top: 1vh;
 
 }
-.saleSection .box p{
+
+.saleSection .box p {
     color: #111;
     font-size: 3.5vh;
     font-weight: 500;
     text-transform: capitalize;
     line-height: 33px;
 }
-.saleSection .box a{
+
+.saleSection .box a {
     color: #333;
     font-size: 2.4vh;
     margin-top: 1vh;
     display: inline-block;
     font-weight: 300;
 }
-.saleSection .box img{
+
+.saleSection .box img {
     height: 100%;
     width: 100%;
     object-fit: contain;
@@ -231,21 +294,27 @@ body{
     margin-right: 2vh;
     z-index: 99999999;
 }
-.circle{
-    width: 125px; /* Adjust as needed */
-    height: 125px; /* Adjust as needed */
-    background-color: #c8e4f7; /* Adjust as needed */
-    border-top-left-radius: 100px; /* Same as width and height to make a quarter circle */
+
+.circle {
+    width: 125px;
+    /* Adjust as needed */
+    height: 125px;
+    /* Adjust as needed */
+    background-color: #c8e4f7;
+    /* Adjust as needed */
+    border-top-left-radius: 100px;
+    /* Same as width and height to make a quarter circle */
     border-top-right-radius: 0;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     overflow: hidden;
-    position:absolute;
+    position: absolute;
     bottom: 0;
     right: 0;
     opacity: 0.5;
 }
-.page2Bottom{
+
+.page2Bottom {
     height: 28vh;
     width: 100%;
     background-color: #fefefe;
@@ -256,7 +325,8 @@ body{
     padding: 0 5vh;
     margin-bottom: 15vh;
 }
-.grid{
+
+.grid {
     height: 35%;
     width: 20%;
     display: flex;
@@ -264,22 +334,26 @@ body{
     justify-content: space-between;
     padding: 0 2vh;
 }
+
 .grid i {
     color: #6ba6ff;
     font-size: 5vh;
     display: inline-block;
 }
-.grid p{
+
+.grid p {
     color: #333;
     font-size: 2.6vh;
     font-weight: 500;
-    
+
 }
-.grid span{
+
+.grid span {
     color: #333;
     font-size: 2.2vh;
 }
-.page3{
+
+.page3 {
     min-height: 100vh;
     width: 100vw;
     background-color: #f7f7f7;
@@ -290,14 +364,17 @@ body{
     flex-direction: column;
     padding: 0 8vh;
 }
-.page3Head h1{
+
+.page3Head h1 {
     font-size: 4.2vh;
     color: #222;
 }
-.page3Head p{
+
+.page3Head p {
     font-size: 2.5vh;
 }
-.page3Bottom{
+
+.page3Bottom {
     height: min-content;
     width: 100%;
     margin-top: 10vh;
@@ -306,12 +383,14 @@ body{
     justify-content: space-between;
     flex-wrap: wrap;
 }
-.productTop img{
+
+.productTop img {
     height: 100%;
     width: 100%;
     object-fit: contain;
 }
-.product{
+
+.product {
     height: 100%;
     width: 27%;
     display: flex;
@@ -324,68 +403,81 @@ body{
     scale: 0.9;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
-.product:hover{
+
+.product:hover {
     background-color: #f4f4f416;
     transform: scale(1.03);
 }
-.productTop{
+
+.productTop {
     height: 45%;
     width: 100%;
 }
-.productBottom{
+
+.productBottom {
     height: 55%;
     width: 100%;
     padding: 0 2vh;
 }
-.productName{
+
+.productName {
     font-size: 3.5vh;
     font-weight: 600;
 }
-.rating i{
+
+.rating i {
     color: #dede03;
     margin-top: 0.5vh;
     font-size: 2.3vh;
 }
-.discription{
+
+.discription {
     font-size: 2.3vh;
     color: #4d4d4d;
     margin-bottom: 0.4vh;
 }
-.price{
+
+.price {
     color: #222;
     font-size: 2.4vh;
     font-weight: 500;
 }
-.price span{
+
+.price span {
     text-decoration: line-through;
 }
-.stocks{
+
+.stocks {
     font-size: 2.4vh;
     margin: 1vh 0;
     font-weight: 300;
 }
-.quantity{
-    height:7.5vh ;
+
+.quantity {
+    height: 7.5vh;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.quantityHead{
+
+.quantityHead {
     font-size: 2.2vh;
     display: flex;
     width: 50%;
     align-items: center;
     justify-content: flex-start;
 }
-.quantityBox{
+
+.quantityBox {
     height: 100%;
     width: 50%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.shop{
+
+.shop {
     padding: 1.2vh 2.6vh;
     background-color: #111;
     color: #fff;
@@ -394,7 +486,8 @@ body{
     font-size: 2.45vh;
     margin-top: 2vh;
 }
-.quantityBoxSec{
+
+.quantityBoxSec {
     height: 85%;
     width: 33.3%;
     border: 1px solid rgb(166, 183, 241);
@@ -403,33 +496,39 @@ body{
     justify-content: center;
     font-size: 1.85vh;
 }
-.page4{
+
+.page4 {
     min-height: 100vh;
     width: 100vw;
     background-color: #f7f7f7;
     padding: 8vh;
 }
-.page4 h1{
+
+.page4 h1 {
     font-size: 5vh;
     color: #111;
 }
-.page4 span{
+
+.page4 span {
     font-size: 2.4vh;
 }
-.page4Box{
+
+.page4Box {
     height: 40vh;
     width: 58vh;
     position: relative;
     margin-bottom: 3vh;
     scale: 0;
 }
-.page4Bottom{
+
+.page4Bottom {
     margin-top: 7vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.page4Circle{
+
+.page4Circle {
     height: 6vh;
     width: 6vh;
     border-radius: 50%;
@@ -442,7 +541,8 @@ body{
     right: 0;
     font-size: 2.8vh;
 }
-.page4Box h2{
+
+.page4Box h2 {
     margin-top: 7vh;
     font-size: 4.5vh;
     position: absolute;
@@ -450,20 +550,22 @@ body{
     font-weight: 500;
 }
 
-.page4Box p{
+.page4Box p {
     position: absolute;
     left: 8%;
     margin-top: 15vh;
     font-size: 2.6vh;
     word-spacing: 0.75vh;
 }
-.page4 img{
+
+.page4 img {
     height: 65%;
     width: 50%;
     object-fit: contain;
-    
+
 }
-.pageSectionImg{
+
+.pageSectionImg {
     display: flex;
     align-items: flex-end;
     justify-content: center;
@@ -471,7 +573,8 @@ body{
     height: 100%;
     width: 100%;
 }
-.footer{
+
+.footer {
     height: 45vh;
     width: 94vw;
     display: flex;
@@ -480,7 +583,8 @@ body{
     background-color: #2a2c30;
     color: #cccccc;
 }
-.footerSec{
+
+.footerSec {
     height: 60%;
     width: 22%;
     padding: 6vh 0 2vh 0;
@@ -490,18 +594,21 @@ body{
     justify-content: center;
 
 }
+
 .footerSec1 {
     width: 60%;
-    padding-right:3vh ;
-    padding-left:3vh ;
+    padding-right: 3vh;
+    padding-left: 3vh;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
 }
-.footerSec1 p{
+
+.footerSec1 p {
     font-size: 2vh;
 }
-.card{
+
+.card {
     height: 7vh;
     width: 40%;
     margin-top: 1vh;
@@ -509,46 +616,55 @@ body{
     align-items: center;
     justify-content: space-between;
 }
+
 .card i {
     font-size: 4vh;
     color: #8fbcff;
 }
-.footerSec h1{
+
+.footerSec h1 {
     font-size: 2.8vh;
     font-weight: 500;
     color: #f7f7f7;
-    
+
 }
-.footerSec2{
-    padding-right:3vh;
-    padding-left:3vh;
+
+.footerSec2 {
+    padding-right: 3vh;
+    padding-left: 3vh;
     height: 60%;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
 }
-.footerSec2 h1{
+
+.footerSec2 h1 {
     margin-bottom: 1vh;
     margin-top: 2.5vh;
 }
-.footerSec2Bottom{
+
+.footerSec2Bottom {
     height: 20vh;
     font-size: 2vh;
 }
-.footerSec4 h1{
+
+.footerSec4 h1 {
     margin-top: 1.2vh;
 }
-.footerSec4 input{
+
+.footerSec4 input {
     color: #f7f7f7;
-    border-radius:5px ;
+    border-radius: 5px;
     height: 4.5vh;
     margin-top: 1.5vh;
 }
-.footerSec4 input::placeholder{
+
+.footerSec4 input::placeholder {
     color: #050404;
     padding: 0 1vh;
     font-size: 2.2vh;
 }
+
 .catchMe {
     background-color: #333;
     color: white;
@@ -556,19 +672,23 @@ body{
     text-align: center;
     width: 94vw;
 }
+
 .catchMe a {
     color: white;
     margin: 0 10px;
     text-decoration: none;
 }
+
 .catchMe .social-icons {
     margin-top: 10px;
 }
+
 .catchMe .social-icons ion-icon {
     font-size: 24px;
 }
-@media (max-width:600px){
-    .main{
+
+@media (max-width:600px) {
+    .main {
         height: 110vh;
         width: 100vw;
         display: flex;
@@ -577,15 +697,18 @@ body{
         flex-direction: column;
         box-shadow: 0px 1px 8px 0px #888888;
     }
-    .menu{
+
+    .menu {
         font-size: 3vh;
         display: flex;
     }
+
     .mainContent {
         flex-direction: column-reverse;
         margin-top: 11vh;
     }
-    .nav{
+
+    .nav {
         height: 8.5vh;
         background-color: #fff;
         width: 100vw;
@@ -595,59 +718,73 @@ body{
         width: 100%;
         padding: 0 1.6VH;
     }
+
     .navRight {
         align-items: flex-end;
         justify-content: flex-end;
     }
+
     .mainLeft p {
         font-size: 2.1vh;
     }
+
     .mainLeft h1 {
         font-size: 3.4vh;
         font-weight: 700;
     }
+
     .mainLeft {
         width: 100%;
         padding: 0 2vh;
     }
-    .navRight h1, .cart{
+
+    .navRight h1,
+    .cart {
         display: none;
     }
-    .cart span{
+
+    .cart span {
         font-size: 2.7vh;
         display: inline-block;
     }
-    .mainContent{
+
+    .mainContent {
         display: flex;
         align-items: center;
         justify-content: space-between;
         height: 100%;
         width: 100%;
     }
-    .mainRight{
+
+    .mainRight {
         width: 100%;
     }
-    .mainRight img{
+
+    .mainRight img {
         object-fit: contain;
         object-position: center;
         height: 100%;
         width: 100%;
     }
+
     .mainLeft p {
         font-size: 2.6vh;
         text-transform: uppercase;
         letter-spacing: 1.2px;
         margin-bottom: 10px;
     }
+
     .mainLeft {
         width: 100%;
         padding: 0 2vh;
         height: 70%;
     }
+
     .mainRight {
         width: 100%;
         height: 30%;
     }
+
     .mainLeft span {
         color: #fff;
         font-size: 2.8vh;
@@ -655,6 +792,7 @@ body{
         display: inline-block;
         margin-bottom: 20px;
     }
+
     .mainLeft button {
         padding: 7px 15px;
         background-color: #111;
@@ -662,28 +800,32 @@ body{
         font-size: 2.2vh;
         text-transform: uppercase;
         border-radius: 10px;
-        
+
     }
-    .mainContent svg{
-            position: absolute;
-            left: 0;
-            overflow: hidden;
-            line-height: 0;
-            transform: rotate(180deg);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            bottom: -6%;
+
+    .mainContent svg {
+        position: absolute;
+        left: 0;
+        overflow: hidden;
+        line-height: 0;
+        transform: rotate(180deg);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        bottom: -6%;
     }
+
     .mainLeft button {
         padding: 8px 16px;
     }
+
     .saleSection .box {
         height: 100%;
         width: 100%;
         margin-bottom: 2vh;
     }
-    .page2{
+
+    .page2 {
         padding: 0 1.8vh;
         min-height: 180vh;
         max-height: 0;
@@ -692,6 +834,7 @@ body{
         justify-content: space-between;
         flex-direction: column;
     }
+
     .saleSection {
         min-height: 100vh;
         display: flex;
@@ -700,11 +843,13 @@ body{
         margin-top: 10vh;
         flex-direction: column;
     }
+
     .saleSection .box {
         height: 33%;
         width: 100%;
         margin-bottom: 2vh;
     }
+
     .page2Bottom {
         width: 100%;
         background-color: #fefefe;
@@ -717,6 +862,7 @@ body{
         height: 80vh;
         margin-bottom: 4vh;
     }
+
     .grid {
         height: 35%;
         width: 100%;
@@ -725,19 +871,23 @@ body{
         justify-content: space-between;
         padding: 0 2vh;
     }
+
     .grid p {
         color: #333;
         font-size: 2.8vh;
         font-weight: 500;
     }
+
     .page3 {
         min-height: 300vh;
         padding: 0 1.8vh;
         align-items: center;
     }
+
     .page3Head h1 {
         font-size: 4vh;
     }
+
     .page3Bottom {
         height: min-content;
         width: 100%;
@@ -748,6 +898,7 @@ body{
         flex-direction: row;
         flex-wrap: wrap;
     }
+
     .product {
         height: 100%;
         width: 100%;
@@ -759,48 +910,58 @@ body{
         margin-bottom: 5vh;
         padding-bottom: 5vh;
     }
+
     .page4 {
         min-height: 100vh;
         width: 100vw;
         background-color: #f7f7f7;
         padding: 3vh 2.5vh;
     }
+
     .page4Box p {
         position: absolute;
         left: 2%;
         margin-top: 15vh;
         font-size: 2.6vh;
     }
+
     .page4Bottom {
         margin-top: 7vh;
         flex-direction: column;
     }
+
     .page4Box {
         width: 100vw;
     }
+
     .page4 h1 {
         font-size: 4.2vh;
         color: #111;
     }
+
     .page4Box h2 {
         font-size: 4vh;
         right: 3%;
     }
+
     .page4 img {
         height: 100%;
         width: 100%;
         margin: 5vh;
     }
-    .footer{
+
+    .footer {
         height: 97vh;
         flex-direction: column;
     }
+
     .footerSec1 {
         width: 100%;
         padding-right: 1.8vh;
         padding-left: 1.8vh;
         height: 50%;
     }
+
     .footerSec {
         height: 60%;
         width: 100%;
@@ -810,63 +971,78 @@ body{
         flex-direction: column;
         justify-content: center;
     }
+
     .navRight {
         align-items: center;
         justify-content: flex-start;
         gap: 1vh;
         flex-direction: row-reverse;
     }
+
     .footerSec2 {
         padding-right: 1.8vh;
         padding-left: 1.8vh;
         height: 22%;
     }
-    .card{
+
+    .card {
         width: 80%;
     }
-    .footerSec3{
+
+    .footerSec3 {
         height: 20%;
     }
-    .footerSec4{
+
+    .footerSec4 {
         height: 25%;
         margin-bottom: 10vh;
     }
+
     .footerSec2 h1 {
         margin-bottom: 1vh;
         margin-top: 0;
     }
-    .page4Circle{
+
+    .page4Circle {
         right: 3%;
     }
-    .quantityBox{
+
+    .quantityBox {
         height: 85%;
         width: 50%;
         display: flex;
         align-items: center;
         justify-content: space-between;
     }
-    .quantityHead{
+
+    .quantityHead {
         width: 45%;
     }
 }
+
 @media (max-width: 600px) {
     .catchMe {
         padding: 15px;
     }
+
     .catchMe .social-icons ion-icon {
         font-size: 20px;
     }
+
     .catchMe a {
         margin: 0 5px;
     }
 }
+
 @media (max-width: 400px) {
     .catchMe p {
         font-size: 14px;
     }
+
     .catchMe .social-icons ion-icon {
         font-size: 18px;
     }
+
     .catchMe a {
         margin: 0 3px;
     }

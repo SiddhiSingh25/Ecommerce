@@ -7,7 +7,7 @@ newDiv.innerHTML = `<h1 class="logo">S.K MART</h1>
             <h1><a href="index.html#home" style="text-decoration: none; color:#222">HOme</a></h1>
             <h1><a href="index.html#About" style="text-decoration: none; color:#222">About Us</a></h1>
             <h1><a href="index.html#product" style="text-decoration: none; color:#222">Product</a></h1>
-            <h1><a href="index.html#product" style="text-decoration: none; color:#222">Contact</a></h1>
+            <h1 class="contact">Feedback</h1>
             <div class="cart" style="display: flex;"><i class="fa-solid fa-cart-shopping"></i><span>0</span></div>
             <div class="menu"><i class="fa-solid fa-bars"></i></div>
         </div>`;
@@ -70,3 +70,6 @@ const load = () => {
 }, 100);
 };
 load();
+document.querySelector('.contact').addEventListener('click', function() {
+    window.location.href = 'feedback.html';
+    });
