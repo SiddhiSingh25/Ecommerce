@@ -20,7 +20,6 @@ body{
     justify-content: CENTER;
     flex-direction: column;
     display:flex;
-    scale: 1;
 }
 .menu, .mark{
     font-size: 3vh;

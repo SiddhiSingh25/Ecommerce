@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S.K Mart Feedback</title>
+    <style>
+        body {
+            background: linear-gradient(to RIGHT, #8fbcffff, #c0e5fcff);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            width: 100vw;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 0;
+            margin: 0;
+        }
+
+        .container {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            height: 78vh;
+            width: 70vw;
+            border: 1px solid #dcdcdc;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: column;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .head {
+            height: 10%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding-top: 2vh;
+        }
+
+        .head h2 {
+            font-size: 6.5vh;
+            text-shadow: 1px 1px 2px #aaa;
+        }
+
+        .bottom {
+            height: 85%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .img {
+            height: 100%;
+            width: 45%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .content {
+            height: 100%;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .img img {
+            max-height: 100%;
+            max-width: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .content h1 {
+            font-weight: 500;
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        input,
+        textarea,
+        select {
+            height: 38px;
+            width: 97%;
+            border-radius: 5px;
+            border: 1px solid #dce2f7;
+            padding: 7px;
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        textarea {
+            resize: vertical;
+            height: 100px;
+        }
+
+        input[type="file"] {
+            padding: 3px;
+        }
+
+        .content input::placeholder,
+        .content textarea::placeholder {
+            font-size: 16px;
+            color: #636262;
+        }
+        .Submit{
+            height: 1.6vh 4vh;
+            background: #111;
+            color: #f6f6f6;
+            padding: .8vh 2vh;
+            width: fit-content;
+            font-size: 18px;
+            border-radius: 5px;
+        }
+        @media (max-width: 768px) {
+            .container {
+                width: 90vw;
+                height: auto;
+            }
+
+            .bottom {
+                flex-direction: column;
+            }
+
+            .img {
+                width: 100%;
+                height: auto;
+                margin-bottom: 2vh;
+            }
+
+            .content {
+                width: 100%;
+                height: auto;
+            }
+
+            .head h2 {
+                font-size: 4.2vh;
+            }
+
+            input,
+            select {
+                height: 35px;
+                width: 97%;
+                padding: 1px;
+                font-size: 15px;
+                margin-bottom: 10px;
+            }
+            input ::placeholder{
+                font-size: 14px;
+            }
+            textarea{
+                height:50px ;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="head">
+            <h2>Your valuable &nbsp;<span style="color: #4a85de;">Feedback</span></h2>
+        </div>
+        <div class="bottom">
+            <div class="img"><img src="https://th.bing.com/th/id/OIP.ctTo4G9gOdFOM_Hm3co_swHaE7?rs=1&pid=ImgDetMain"
+                    alt="Customer Feedback"></div>
+            <div class="content">
+                <label><input type="text" placeholder="Your Name" /></label>
+                <label><input type="email" placeholder="Your Email" /></label>
+                <label><select>
+                        <option>Rating</option>
+                        <option value="5">5 - Excellent</option>
+                        <option value="4">4 - Very Good</option>
+                        <option value="3">3 - Good</option>
+                        <option value="2">2 - Fair</option>
+                        <option value="1">1 - Poor</option>
+                    </select>
+                </label>
+                <label><input type="file" placeholder="Product Image" /></label>
+                <label><textarea placeholder="Your Message"></textarea></label>
+                <button class="Submit">Submit</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

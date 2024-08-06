@@ -1,8 +1,8 @@
-/*const scroll = new LocomotiveScroll({
+const scroll = new LocomotiveScroll({
     el: document.querySelector('.container'),
     smooth: true,
     lerp: 0.04
-});*/
+});
 let alpha;
 const load = () => {
     setTimeout(() => {
@@ -355,6 +355,9 @@ console.log('Product not found');
 document.querySelector('.cart').addEventListener('click', function() {
 window.location.href = 'addToCart.html';
 });
+document.querySelector('.contact').addEventListener('click', function() {
+    window.location.href = 'feedback.html';
+    });
 
 /*function removeProductById(productId) {
 // Retrieve existing products from local storage
